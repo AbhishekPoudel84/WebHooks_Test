@@ -12,7 +12,7 @@ export class AppController {
 
   @Post('/git-webhook')
   handleWebhook(@Body() data: any): string {
-    console.log(data.sender.login);
+    console.log(`The changes were made by ${data.sender.login}`);
     return 'Received!';
   }
 }
