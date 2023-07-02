@@ -11,8 +11,8 @@ export class AppController {
   }
 
   @Post('/git-webhook')
-  handleWebhook(@Body() body: any): string {
-    console.log(body);
+  handleWebhook(@Body() data: any): string {
+    console.log(data.sender.login);
     return 'Received!';
   }
 }
