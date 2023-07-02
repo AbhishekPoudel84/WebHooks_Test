@@ -10,7 +10,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Post('git-webhook')
+  @Post('/git-webhook')
   handleWebhook(@Body() data: any): string {
     console.log(data);
     return 'Received!';
